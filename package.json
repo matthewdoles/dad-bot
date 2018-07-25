@@ -1,0 +1,38 @@
+{
+  "name": "tweet-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for embedding Twitter photo albums",
+  "main": "index.js",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "package.json": "^2.0.1",
+    "snekfetch": "^4.0.4",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewdoles/twitter-photos-discord-bot.git"
+  },
+  "keywords": [
+    "twitter",
+    "discord",
+    "discord.js",
+    "photo",
+    "albums"
+  ],
+  "author": "matthewdoles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewdoles/twitter-photos-discord-bot/issues"
+  },
+  "homepage": "https://github.com/matthewdoles/twitter-photos-discord-bot#readme"
+}
