@@ -26,7 +26,7 @@ client.on('message', async message => {
     try {
         // if bot mentioned, ask politely what they want
         if (message.isMentioned(client.user)) {
-            return message.channel.send("What the fuck you want?");
+            return message.channel.send("Yes, son?");
         } 
     } catch (err) {
         console.log(err);
