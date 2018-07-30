@@ -1,7 +1,7 @@
 {
-  "name": "tweet-bot",
+  "name": "dad-bot",
   "version": "1.0.0",
-  "description": "Discord bot for embedding Twitter photo albums",
+  "description": "Discord bot for dad stuff",
   "main": "index.js",
   "engines": {
     "node": "8.11.3",
@@ -9,8 +9,9 @@
   },
   "dependencies": {
     "discord.js": "^11.3.2",
+    "dotenv": "6.0.0",
+    "snekfetch": "4.0.4",
     "package.json": "^2.0.1",
-    "snekfetch": "^4.0.4",
     "twitter": "^1.7.1"
   },
   "devDependencies": {},

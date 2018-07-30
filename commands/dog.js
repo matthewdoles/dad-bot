@@ -1,12 +1,12 @@
 const snekfetch = require('snekfetch');
 
 module.exports = {
-    name: 'cat',
-    description: 'A random cat wow.',
+    name: 'dog',
+    description: 'A random dog wow.',
     async execute(message) {
-      snekfetch.get('https://aws.random.cat/meow')
+      snekfetch.get('https://dog.ceo/api/breeds/image/random')
         .then(({ body }) => {
-          message.channel.send(body.file)
+          message.channel.send(body.message)
             .catch(console.log);
         })
         .catch(console.log);

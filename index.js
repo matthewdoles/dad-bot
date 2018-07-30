@@ -2,6 +2,7 @@
 // require node's file system
 const fs = require('fs');
 const Discord = require('discord.js');
+require('dotenv').config();
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
