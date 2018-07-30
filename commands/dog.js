@@ -10,7 +10,8 @@ module.exports = {
           .catch(console.log);
         return;
       }
-      snekfetch.get(`https://dog.ceo/api/breed/${breed}/images/random`)
+      if (breed) {
+        snekfetch.get(`https://dog.ceo/api/breed/${breed}/images/random`)
         .then(({ body }) => {
           message.channel.send(body.message)
             .catch(console.log);
@@ -19,5 +20,12 @@ module.exports = {
           message.channel.send('UwU sowwy but no images were found for that breed UwU.')
             .catch(console.log);
         });
+      } else {
+        snekfetch.get(`https://dog.ceo/api/breeds/image/random`)
+          .then(({ body }) => {
+            message.channel.send(body.message)
+              .catch(console.log);
+          })
+      }
     },
 };
