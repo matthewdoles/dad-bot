@@ -3,6 +3,7 @@ const snekfetch = require('snekfetch');
 module.exports = {
     name: 'dog',
     description: 'A random dog wow.',
+    aliases: ['doggo', 'doggy', 'goodboy', 'woofer', 'boofer'],
     async execute(message, args) {
       const breed = args[0];
       if (breed === 'list') {

@@ -2,6 +2,7 @@ var Twitter = require('twitter');
 module.exports = {
     name: 'tweet',
     description: 'Retrieve full photo album for a tweet.',
+    aliases: ['twitter', 'twat', 'twit', 'tit'],
     async execute(message, args) {
         try {
             // Twitter API keys
