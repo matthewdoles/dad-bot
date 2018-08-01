@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'help',
+    name: 'dadhelp',
     description: 'List all available commands or info about a specific command.',
-    aliases: ['commands'],
+    aliases: ['helpmedaddy'],
     execute(message, args) {
         const data = [];
         const { commands } = message.client;
@@ -10,7 +10,7 @@ module.exports = {
         if (!args.length) {
             data.push('Here\'s a list of all my commands:');
 			data.push(commands.map(command => command.name).join('\n'));
-			data.push(`\nUse \`${process.env.prefix}help [command name]\` to get info on a specific command!`);
+			data.push(`\nUse \`${process.env.prefix}dadhelp [command name]\` to get info on a specific command!`);
 
 			return message.channel.send(data, { split: true })
 		}
