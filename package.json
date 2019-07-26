@@ -11,7 +11,10 @@
     "discord.js": "^11.5.1",
     "dotenv": "^6.2.0",
     "package.json": "^2.0.1",
+    "pg": "^7.12.0",
     "sequelize": "^5.10.3",
+    "sequelize-cli": "^5.5.0",
+    "sequelize-heroku": "^2.1.3",
     "snekfetch": "4.0.4",
     "sqlite3": "^4.0.9",
     "twitter": "^1.7.1"
@@ -23,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matthewdoles/twitter-photos-discord-bot.git"
+    "url": "git+https://github.com/matthewdoles/dad-bot"
   },
   "keywords": [
     "twitter",
@@ -33,9 +36,8 @@
     "albums"
   ],
   "author": "matthewdoles",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matthewdoles/twitter-photos-discord-bot/issues"
+    "url": "https://github.com/matthewdoles/dad-bot"
   },
-  "homepage": "https://github.com/matthewdoles/twitter-photos-discord-bot#readme"
+  "homepage": "https://github.com/matthewdoles/dad-bot#readme"
 }

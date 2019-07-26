@@ -3,11 +3,10 @@
 const fs = require('fs');
 // Discord.js
 const Discord = require('discord.js');
-// environment variables
-require('dotenv').config();
-
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
+// environment variables
+require('dotenv').config();
 
 // retrieve command files
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
