@@ -32,7 +32,7 @@ client.on('message', async message => {
     }
 
     // return if message doesn't begin with command prefix or is a message from the bot
-    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
+    if (!message.content.startsWith(process.env.prefix) || message.author.bot) return;
     
     // split command arguments by spaces
     const args = message.content.slice(process.env.prefix.length).split(/ +/);
