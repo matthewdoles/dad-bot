@@ -8,10 +8,12 @@
     "npm": "5.6.0"
   },
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "dotenv": "6.0.0",
-    "snekfetch": "4.0.4",
+    "discord.js": "^11.5.1",
+    "dotenv": "^6.2.0",
     "package.json": "^2.0.1",
+    "sequelize": "^5.10.3",
+    "snekfetch": "4.0.4",
+    "sqlite3": "^4.0.9",
     "twitter": "^1.7.1"
   },
   "devDependencies": {},

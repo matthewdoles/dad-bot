@@ -5,7 +5,7 @@ module.exports = {
 
        // if no user specified, prompt no user give
         if (!message.mentions.users.size) {
-            message.channel.send(`Sorry, no user given. Whos birthday is it?`);
+            message.channel.send(`Sorry, no user given. Whose birthday is it?`);
         } else {
             // wish happy birthday to first user tagged
             const taggedUser = message.mentions.users.first();

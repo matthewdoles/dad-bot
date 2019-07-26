@@ -1,7 +1,9 @@
 
 // require node's file system
 const fs = require('fs');
+// Discord.js
 const Discord = require('discord.js');
+// environment variables
 require('dotenv').config();
 
 const client = new Discord.Client();
@@ -11,30 +13,27 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
-    
-    // key is command name and the value the exported module
+    // key is command name; value the exported module
     client.commands.set(command.name, command);
 }
 
+// set status, provide help command
 client.on('ready', () => {
-    client.on('ready', () => {
-        client.user.setActivity('https://git.io/twitter-photos-discord-bot', {type: 'WATCHING'});
-    });
+    client.user.setActivity(' out for my dads: !dadhelp', {type: 'Watching'});
 });
 
 client.on('message', async message => {
     
-    try {
-        // if bot mentioned, ask politely what they want
-        if (message.isMentioned(client.user)) {
-            return message.channel.send("Yes, son?");
-        } 
-    } catch (err) {
-        console.log(err);
+    if (message.isMentioned(client.user)) {
+        return message.channel.send("How can I help you son?");
+    } 
+    yourMomArray = ['ur mom', 'ur mom gay', 'ur gay', 'your mom', 'your mom gay', 'your gay'];
+    if (yourMomArray.some(substring=>message.content.toLowerCase().includes(substring))) {
+        return message.channel.send("No u!");
     }
 
-    // on message send, check that message begins with command prefix
-    if (!message.content.startsWith(process.env.prefix) || message.author.bot) return;
+    // return if message doesn't begin with command prefix or is a message from the bot
+    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
     
     // split command arguments by spaces
     const args = message.content.slice(process.env.prefix.length).split(/ +/);
@@ -64,8 +63,7 @@ client.on('message', async message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
 	}
 });
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);
