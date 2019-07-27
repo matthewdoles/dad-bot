@@ -26,15 +26,18 @@ module.exports = {
         });
         Pin.sync();
 
-        const pinContent = args.join(' ');
-        console.log(pinContent);
-        try {
-            // equivalent to: INSERT INTO tags (name, description, username) values (?, ?, ?);
-            const pin = await Pin.create({pinName: pinContent,});
-            return message.channel.send(`Pin successfully saved.`);
-        }
-        catch (e) {
-            return message.channel.send(`Oopsie woopsies, something went wrong when saving the pin.`);
-        }
+        const messageId = args.shift();
+
+        message.channel.fetchMessage(messageId).then(msg => {
+            try {
+                // equivalent to: INSERT INTO tags (name, description, username) values (?, ?, ?);
+                const pin = Pin.create({pinName: msg.content});
+                return message.channel.send(`Pin successfully saved.`);
+            }
+            catch (e) {
+                return message.channel.send(`Oopsie woopsies, something went wrong when saving the pin.`);
+            }
+        })
+
     },
 };
