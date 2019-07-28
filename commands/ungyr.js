@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'ungry',
+    name: 'ungyr',
     description: 'Oh no....',
     execute(message) {      
         const reply = [
