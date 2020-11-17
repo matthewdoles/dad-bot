@@ -26,9 +26,9 @@ client.on('message', async message => {
     if (message.isMentioned(client.user)) {
         return message.channel.send("How can I help you son?");
     } 
-    yourMomArray = ['ur mom', 'ur mom gay', 'ur gay', 'your mom', 'your mom gay', 'your gay'];
-    if (yourMomArray.some(substring=>message.content.toLowerCase().includes(substring))) {
-        return message.channel.send("No u!");
+
+    if (message.content.toLowerCase() === 'daniel craig') {
+        return message.channel.send("holy poggers guys https://imgur.com/a/jXOA1Aw");
     }
 
     // return if message doesn't begin with command prefix or is a message from the bot
