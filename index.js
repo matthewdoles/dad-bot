@@ -1,6 +1,8 @@
 const fs = require('fs');
+const cron = require('cron');
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
 client.commands = new Discord.Collection();
 require('dotenv').config();
 
@@ -62,7 +64,20 @@ client.on('message', async (message) => {
     );
   }
 
+  const scheduledMessage = new cron.CronJob('* * * * *', () => {
+    const channel = client.channels.get('604097296254107680');
+    channel.send('Hi');
+  });
+
+  scheduledMessage.start();
+
   try {
+    if (
+      commandName === 'goodmorningstart' ||
+      commandName === 'goodmorningstop'
+    ) {
+      command.execute(scheduledMessage);
+    }
     command.execute(message, args);
   } catch (error) {
     console.error(error);
