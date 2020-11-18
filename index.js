@@ -34,7 +34,7 @@ const scheduledMessage = new cron.CronJob('0 9 * * *', async () => {
         'https://api.imgur.com/3/gallery/search/time/month?q=it+is+wednesday+my+dudes'
       )
       .set({
-        Authorization: `Client-ID ${process.env.imgur_client_id}f00543f819732df`,
+        Authorization: `Client-ID ${process.env.imgur_client_id}`,
       })
       .then(({ body }) => {
         return channel.send(
