@@ -1,7 +1,7 @@
 module.exports = {
   name: 'dadhelp',
   description: 'List all available commands or info about a specific command.',
-  aliases: ['helpmedaddy'],
+  aliases: ['helpme'],
   execute(message, args) {
     const data = [];
     const { commands } = message.client;
