@@ -6,9 +6,7 @@ client.commands = new Discord.Collection();
 require('dotenv').config();
 
 // retrieve command files
-const commandFiles = fs
-  .readdirSync('./commands')
-  .filter((file) => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./commands');
 
 // key is command name, value the exported module
 commandFiles.forEach((file) => {
