@@ -39,7 +39,7 @@ const goodMorningMessage = new cron.CronJob(
       } else {
         snekfetch
           .get(
-            'https://api.imgur.com/3/gallery/search/time/week?q=good+morning'
+            'https://api.imgur.com/3/gallery/search/time/week?q_exactly=good+morning'
           )
           .set({ Authorization: `Client-ID ${process.env.imgur_client_id}` })
           .then(({ body }) => {
